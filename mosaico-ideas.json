@@ -1,0 +1,42 @@
+{
+  "schema": "mosaico-ideas/project-upload/v1",
+  "project": {
+    "title": "Bambu Monitor · 拓竹打印机监视屏",
+    "categories": ["display"],
+    "boards": [],
+    "tags": [
+      "3D打印",
+      "拓竹",
+      "Bambu Lab",
+      "H2D",
+      "AMS",
+      "监视屏",
+      "MQTT",
+      "局域网",
+      "进度提醒",
+      "ESP-GSP"
+    ],
+    "license": "MIT",
+    "external_links": [
+      {
+        "label": "源码仓库 zaxchou/esp-mosaico-bambu-monitor",
+        "url": "https://github.com/zaxchou/esp-mosaico-bambu-monitor",
+        "platform": "github"
+      }
+    ]
+  },
+  "content": {
+    "readme": "README.md",
+    "covers": [
+      "docs/submission/cover.png",
+      "docs/submission/01-status-real-printing.png",
+      "docs/submission/02-status-running-controls.png",
+      "docs/submission/03-ams-materials.png"
+    ],
+    "resources": [],
+    "attachments": []
+  },
+  "release": {
+    "changelog": "首发 1.0.0：拓竹 H2D 局域网直连监视——实时进度、层数、喷嘴/热床温度、剩余时间与预计完成时刻；AMS 料仓颜色、材质与余量；打印完成/出错蜂鸣提醒与 32 位错误码；暂停/继续、三档速度、腔室灯开关、停止二次确认；离线自动重连，配对信息存 NVS 断电不丢。全新刷机后在设置页输入打印机 IP 与访问码即可配对。"
+  }
+}

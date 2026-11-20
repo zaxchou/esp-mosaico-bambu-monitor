@@ -1,0 +1,13 @@
+dependencies:
+  idf: ">=6.2"
+  esp-mosaico-bsp:
+    version: "*"
+    override_path: "../../../submodule/esp-mosaico-bsp/components/esp-mosaico-bsp"
+  esp_iris:
+    version: "*"
+    override_path: "../../../submodule/esp-mosaico-utils/ESP-Iris/components/esp_iris"
+  espressif/esp-gsp: "==1.5.1"
+  # IDF 6.x: esp-mqtt is a managed component named espressif/mqtt.
+  espressif/mqtt: "*"
+  # The BSP display adapter uses headers deprecated by LVGL 9.6.
+  lvgl/lvgl: "==9.5.0"

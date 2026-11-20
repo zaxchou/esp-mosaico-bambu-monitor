@@ -1,0 +1,23 @@
+# Build outputs
+build/
+build-sim/
+build-tests/
+managed_components/
+dependencies.lock
+sdkconfig.old
+
+# Bundles built locally (release artifacts are attached to community posts)
+*.irisfw
+*.gspb
+*.bin
+*.elf
+*.map
+
+# Local tooling / evidence
+.codex-runs/
+.codex/
+bmb_evt.txt
+
+# OS noise
+Thumbs.db
+.DS_Store
