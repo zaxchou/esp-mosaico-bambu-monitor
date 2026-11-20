@@ -38,7 +38,7 @@
 
 ### 方式一：社区固件（推荐）
 
-从 [Mosaico Ideas 项目页]（上传后补链接）或本仓库 [Releases] 下载 `bambu_monitor-v0.2-system-update.irisfw`，通过 ESP-Iris 的 System Update 安装。首次启动后：
+从 [GitHub Release](https://github.com/zaxchou/esp-mosaico-bambu-monitor/releases/latest)（或 Mosaico Ideas 项目页附件）下载 `bambu_monitor-v0.2-system-update.irisfw`，通过 ESP-Iris 的 System Update 安装。首次启动后：
 
 1. 屏幕右下 **设置** → 输入打印机的**局域网 IP**；
 2. 再输入**访问码**（打印机屏幕：设置 → 网络 → 局域网/访问码，需开启开发者模式/局域网服务）；
