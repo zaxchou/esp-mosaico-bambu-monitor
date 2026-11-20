@@ -8,7 +8,14 @@
 
 > 已在拓竹 **H2D + AMS Pro** 上实测；其他型号未验证。
 
+![Bambu Monitor — 拓竹打印机监视屏](docs/submission/promo-banner.png)
+
+<details>
+<summary>📱 真机打印画面（点开）</summary>
+
 ![打印中状态（真机）](docs/submission/01-status-real-printing.png)
+
+</details>
 
 ## 功能
 
