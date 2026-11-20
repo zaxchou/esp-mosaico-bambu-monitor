@@ -1,0 +1,290 @@
+{
+  "status": "PASS",
+  "bundle": "C:\\Users\\zeroz\\esp\\work\\bambu-v02-release\\projects\\bambu_monitor\\build\\bambu_monitor-v0.2-system-update.irisfw",
+  "size": 1950862,
+  "sha256": "ee7b2030bdfcbc565dc1c5777668a70d51514ebdb6aed47b40e11f23cb94bc5d",
+  "official_ideas_product_validation": "PASS",
+  "official_bundle_inspect": {
+    "schema": "esp-iris-system-update/0.2",
+    "manifest_sha256": "b0ce472a5b6cb6b50c9ba336b242798a49a79c4ef0938489b65c6f933ee9e3b8",
+    "key_id": null,
+    "chip_id": 32,
+    "flash_size": 16777216,
+    "target_layout_sha256": "dc681b77a53068fd4d89e2a4d41081b46ac7550632dcbec95f4d83ab59344cc7",
+    "components": [
+      {
+        "id": 1,
+        "kind": "partition_table",
+        "flags": 0,
+        "target_offset": 32768,
+        "size": 4096,
+        "sha256": "dc681b77a53068fd4d89e2a4d41081b46ac7550632dcbec95f4d83ab59344cc7",
+        "file": "partition-table.bin"
+      },
+      {
+        "id": 2,
+        "kind": "application",
+        "flags": 0,
+        "target_offset": 2162688,
+        "size": 2000016,
+        "sha256": "7dfd64e71b71cb13809dcb9877ce7e7c618db823089e6ac8b34ce1b24bb37c1e",
+        "file": "ota_0.bin"
+      },
+      {
+        "id": 3,
+        "kind": "data",
+        "flags": 0,
+        "target_offset": 15204352,
+        "size": 1333200,
+        "sha256": "ae679423aff19ebe0e5c5485184b78c281ea964f0383c83adba1316c182f6b2d",
+        "file": "ui_apps.bin"
+      }
+    ],
+    "signature_verified": false,
+    "release": "1.0.0",
+    "minimum_recovery_version": "0.2.0"
+  },
+  "manifest": {
+    "components": [
+      {
+        "file": "partition-table.bin",
+        "id": 1,
+        "kind": "partition_table",
+        "sha256": "dc681b77a53068fd4d89e2a4d41081b46ac7550632dcbec95f4d83ab59344cc7",
+        "size": 4096,
+        "target_offset": 32768
+      },
+      {
+        "file": "ota_0.bin",
+        "id": 2,
+        "kind": "application",
+        "sha256": "7dfd64e71b71cb13809dcb9877ce7e7c618db823089e6ac8b34ce1b24bb37c1e",
+        "size": 2000016,
+        "target_offset": 2162688
+      },
+      {
+        "file": "ui_apps.bin",
+        "id": 3,
+        "kind": "data",
+        "sha256": "ae679423aff19ebe0e5c5485184b78c281ea964f0383c83adba1316c182f6b2d",
+        "size": 1333200,
+        "target_offset": 15204352
+      }
+    ],
+    "minimum_recovery_version": "0.2.0",
+    "release": "1.0.0",
+    "schema": "esp-iris-system-update/0.2",
+    "target": {
+      "chip_id": 32,
+      "flash_size": 16777216
+    },
+    "target_layout_sha256": "dc681b77a53068fd4d89e2a4d41081b46ac7550632dcbec95f4d83ab59344cc7"
+  },
+  "app_descriptor": {
+    "sha256": "7dfd64e71b71cb13809dcb9877ce7e7c618db823089e6ac8b34ce1b24bb37c1e",
+    "size": 2000016,
+    "chip_id": 32,
+    "project_name": "bambu_monitor",
+    "version": "1.0.0",
+    "elf_sha256": "d288e485b2831f8895a2a3ce609dfa3da858c4e54669e158d7cee6172cdda55c"
+  },
+  "effective_contract": [
+    "CONFIG_ESP_IRIS_PRODUCT_CONTRACT=\"esp-mosaico/v2\"",
+    "CONFIG_ESP_IRIS_LAYOUT_ID=\"mosaico-retained-test-2m-v2\"",
+    "CONFIG_ESP_IRIS_RECOVERY_ABI=2",
+    "CONFIG_ESP_IRIS_FIRMWARE_ROLE=1",
+    "CONFIG_ESP_IRIS_OTA_DEFAULT_VIA_RECOVERY=y",
+    "# CONFIG_ESP_IRIS_OTA is not set",
+    "CONFIG_TINYUSB_CDC_COUNT=2",
+    "CONFIG_ESPTOOLPY_FLASHMODE_QIO=y"
+  ],
+  "binary_partitions": [
+    {
+      "name": "otadata",
+      "type": 1,
+      "subtype": 0,
+      "offset": 36864,
+      "size": 8192,
+      "flags": 0
+    },
+    {
+      "name": "phy_init",
+      "type": 1,
+      "subtype": 1,
+      "offset": 45056,
+      "size": 4096,
+      "flags": 0
+    },
+    {
+      "name": "sysmeta",
+      "type": 1,
+      "subtype": 2,
+      "offset": 49152,
+      "size": 81920,
+      "flags": 0
+    },
+    {
+      "name": "vibe_mode",
+      "type": 0,
+      "subtype": 32,
+      "offset": 131072,
+      "size": 1835008,
+      "flags": 0
+    },
+    {
+      "name": "coredump",
+      "type": 1,
+      "subtype": 3,
+      "offset": 1966080,
+      "size": 131072,
+      "flags": 0
+    },
+    {
+      "name": "nvs",
+      "type": 1,
+      "subtype": 2,
+      "offset": 2097152,
+      "size": 65536,
+      "flags": 0
+    },
+    {
+      "name": "main_app",
+      "type": 0,
+      "subtype": 16,
+      "offset": 2162688,
+      "size": 13041664,
+      "flags": 0
+    },
+    {
+      "name": "ui_apps",
+      "type": 1,
+      "subtype": 64,
+      "offset": 15204352,
+      "size": 1572864,
+      "flags": 0
+    }
+  ],
+  "official_product_contract": {
+    "schema_version": 2,
+    "compatibility": {
+      "chip_target": "esp32s31",
+      "product_contract": "esp-mosaico/v2",
+      "board_id": "esp-mosaico",
+      "layout_id": "mosaico-retained-test-2m-v2",
+      "recovery_abi": 2
+    },
+    "partition_table_offset": 32768,
+    "partition_table_region_bytes": 4096,
+    "application_region_start": 2097152,
+    "minimum_recovery_version": "0.2.0",
+    "immutable_layout": {
+      "otadata": [
+        "data",
+        "ota",
+        36864,
+        8192,
+        ""
+      ],
+      "phy_init": [
+        "data",
+        "phy",
+        45056,
+        4096,
+        ""
+      ],
+      "sysmeta": [
+        "data",
+        "nvs",
+        49152,
+        81920,
+        ""
+      ],
+      "vibe_mode": [
+        "app",
+        "test",
+        131072,
+        1835008,
+        ""
+      ],
+      "coredump": [
+        "data",
+        "coredump",
+        1966080,
+        131072,
+        ""
+      ]
+    },
+    "boot_intent": {
+      "partition": "sysmeta",
+      "namespace": "mosaico_boot_v2",
+      "key": "intent",
+      "type": "u32",
+      "recovery_value": 33554433,
+      "consumed_by": "vibe_mode"
+    },
+    "bootstrap_intent": {
+      "partition": "otadata",
+      "offset": 32,
+      "marker": "MOSAICO-BOOT-02!",
+      "image_bytes": 8192,
+      "consumed_by": "vibe_mode",
+      "consumption": "erase first otadata sector after NVS intent commit; second sector preserved",
+      "native_application_flash": "standard blank IDF otadata; no bootstrap marker"
+    }
+  },
+  "unchanged_main_ui_pc_file_count": 46,
+  "unchanged_main_ui_pc_hashes": {
+    "main/bmb_buzz.c": "b29f192ed2b8ccae7b40571290bc7583562e091ea5c0c9d7f410068b4fdd2f36",
+    "main/bmb_buzz.h": "0a75c8c0cff9cb599aa8ad5c778a0556fbc959a6f19aa095da5d44af94e5d1f7",
+    "main/bmb_command.c": "8e7612034e73aba2f95d876e58210105c8809eccf408f3757adf5bad1c5e1133",
+    "main/bmb_command.h": "6810a3fa65323a785f2d936575f200ed29693b4e4cd185ccc14c4d64fca25220",
+    "main/bmb_config.c": "e5db0818ea5c3e53ca8a43adb471df7efaa3c24011679ae1c7749943ef370b3d",
+    "main/bmb_config.h": "7a9c217504fd25651bdf520e101fb5d4c78349c0dff2769bf6e0ceb9ae9a7893",
+    "main/bmb_ctrl.h": "48a6495903641f1f1bf48cf1b4bc34e747c217b3d3a20a200a06b94f81c8abf2",
+    "main/bmb_json.c": "d18718ed4d99799d39c213dbd839242712eb115128332b647423a1c8b4c3e62d",
+    "main/bmb_json.h": "9e1334ece318ec65a65a2db9d5f4322cfb4451618ce3b7f87a2f9d9951eac386",
+    "main/bmb_link.h": "ce98f565767b11bb83c60798283dc2a287ef42dc4dd1fef492bc5711791316b3",
+    "main/bmb_mqtt.c": "b2ff6e33d7ff2c831dbcfb145c4b12f7437276d2f64277aa670c15dff3286d4a",
+    "main/bmb_report.c": "69586a15dde1f943db11a6965098cca24fb7e72587c34f461cba14c293f4ae96",
+    "main/bmb_report.h": "f488db143becef1c9b298949f71cbcb271387bb9d7030483854e322fbdc84e62",
+    "main/bmb_rx.c": "54fb872fa8df0107cd0a5b8b4e5f93a9c2f5e89003d4c3361b6e9dc93f3188cd",
+    "main/bmb_rx.h": "0ed93297ce073863e91d53c48059fb9e93fb62da89f09f92fc9147f7cd15c92b",
+    "main/bmb_state.c": "128bae9a27d710868a98293a1e65eac81502b0a489c44bc59b9d41b30c5f46c1",
+    "main/bmb_state.h": "bfb82f0fe47a8bdfb1b001cf5628ea8b127392cd9cd95447821ef550c88bf17d",
+    "main/bmb_transport_policy.c": "77db252e868768efcb4b0d7deeebd220b0d2e07669ec0c6c46f9c8ef680a36c6",
+    "main/bmb_transport_policy.h": "0efb155b8deb796863d2394a569a32afd6c29b08e4208b5457aca58e0c6114d1",
+    "main/bmb_ui.c": "d4a47f1ca02457ddcc26be6c755fa550e2b0ea701f1690d827ef27045518cc9b",
+    "main/bmb_ui.h": "022aef03b26c2ba49d02e9f2b3c71a5af0a3879613c0cc8c7ab8d78ff9d2ee38",
+    "main/board_display.c": "240dcce5f3f300d63588ab58dcdf7805c4e97900c64901aa35e341e9c7edb946",
+    "main/board_display.h": "128ec234cdb86adaf7100e27146483aca61ad956ee6000bb097799a8e02d5668",
+    "main/CMakeLists.txt": "c5c1c84b69b9c83a972adcbbe40910215f289ad91195017635d016f562349712",
+    "main/idf_component.yml": "e2d2b3ccbbeb1a9b05a23bc24ccad564d87f391490f5f102b572b48c92211388",
+    "main/main.c": "98f466032810d9b83df6053280eaaeda1a655446e919ed7b697e8889cd8bcffd",
+    "ui/charset_cjk.txt": "e8a4b5b9bafe3102b69b920a2c5a496f38728558fc5e91467bf408acbd604e10",
+    "ui/fonts/DejaVuSans-Bold.ttf": "5c1247acef7f2b8522a31742c76d6adcb5569bacc0be7ceaa4dc39dd252ce895",
+    "ui/fonts/DejaVuSans.ttf": "690243adfefe0ce154b547db6205794bd30ac4277275179517a90994f4980648",
+    "ui/fonts/DengBmb.ttf": "24f30f483c3a6af487bdce275bab70ce80da9a7f12ce6bc457d35891867c04b2",
+    "ui/fonts/LICENSE": "e0b064ffb25f664e43e30a2e38c1cab4e51032feee9b077b34af1c961f8005e9",
+    "ui/main.json": "5a8381af96d52c4ea3462eab4e6330bce32ae9a8cc77999970091b4c8a6423e5",
+    "pc/bmb_host_link.c": "41e51c37b4651ea3ec0b87d5961a7d34ced4cb35cc0ce5e92ddc69fc9e1dc144",
+    "pc/bmb_host_link.h": "40c6c1f52e536e5e911ebe3d1ed3266893a8d1e70ad8b44b0a0a618f4ae1d50d",
+    "pc/bmb_observe.c": "0f29b6281147fd3e8fd12931f43aedad88dc6d47af241e3ae3ae039c50cac8ff",
+    "pc/bmb_observe.h": "9f6c221f2778de77c54456db13c1a2b505fbd176b2f1c20495b3f8c45e6d5b4e",
+    "pc/CMakeLists.txt": "5a8feb2b4dd20c3eb5e37201f3eadab704fecc4fe04bd8206b9b2b198f09cee2",
+    "pc/platform_pc.c": "eece16838004664ff9e1da96fa958bfcc0f12bba704f76ca4bca710352762b6f",
+    "pc/tests/run_native_tests.py": "4861f113624936d73b040f0c0fbb1f97a445678563a0593922261a74dfecdf51",
+    "pc/tests/run_ui_startup_tests.py": "a2cc751faf479c0697aa02eac9434b3dbe68dd7b7b4c039ab5db5462d0e73199",
+    "pc/tests/test_bmb_command.c": "633c5670290a6e2b297c6844786d34d58f45dbf01ea7a59e4ef2a2c840680d2e",
+    "pc/tests/test_bmb_report.c": "f548aa7429c095caea827cc1d19f4f51f3a13a011fb3be34e939c82e8138f54d",
+    "pc/tests/test_bmb_rx.c": "d4b125c56c3e88e86c0aaa13cf57b351d7ea88904c8977c7eb0736cc5bfdecba",
+    "pc/tests/test_bmb_transport_policy.c": "b00334e6b343ff9f54da327f504cb997151f84416a5610ac225c94fb58759a8c",
+    "pc/tests/test_bmb_ui_startup.c": "78872942619bb21667d89f059fdf3a342d5786626c896f55a11e405a69db56f7",
+    "pc/tests/test_ui_integration.py": "3b64e51bec0291d7cc3bd1efc05329e7205772cce4fc76ccec725d629758a9b3"
+  },
+  "nvs_data": "Source serialization/namespaces and partition offset/size unchanged; no NVS component in bundle; no device read/write was performed",
+  "limitations": [
+    "No Vibe Mode 0.2 hardware validation",
+    "No community upload or production server acceptance test",
+    "Portable native regressions and the GSP build cover compiled UI behavior but not on-device touch/audio interaction or recovery transitions"
+  ]
+}

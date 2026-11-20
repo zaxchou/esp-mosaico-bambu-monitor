@@ -29,9 +29,10 @@
     "readme": "README.md",
     "covers": [
       "docs/submission/cover.png",
-      "docs/submission/01-status-real-printing.png",
-      "docs/submission/02-status-running-controls.png",
-      "docs/submission/03-ams-materials.png"
+      "docs/submission/promo-dashboard.png",
+      "docs/submission/promo-ams.png",
+      "docs/submission/promo-control.png",
+      "docs/submission/promo-alert.png"
     ],
     "resources": [],
     "attachments": []

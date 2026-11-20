@@ -8,8 +8,18 @@
 | --- | --- |
 | `mosaico-ideas.json` | 上传元数据（标题、分类、标签、许可、封面、changelog） |
 | `README.md` | 详情页富文本（功能、操作、限制） |
-| `docs/community-promo-prompts.md` | 封面/宣传图的 AI 提示词 |
-| `docs/submission/*.png` | 7 张界面截图（真机 1 + 模拟器 6） |
+| `docs/community-promo-prompts.md` | 封面/宣传图的 AI 提示词（记录生成方式） |
+| `docs/USAGE.md` | 使用教程（GitHub 版；社区详情页可摘录） |
+| `docs/submission/cover.png` | 方形封面（成品） |
+| `docs/submission/promo-dashboard.png` | 详情图：实时进度（成品） |
+| `docs/submission/promo-ams.png` | 详情图：料仓余量（成品） |
+| `docs/submission/promo-control.png` | 详情图：触控操作（成品） |
+| `docs/submission/promo-alert.png` | 详情图：完成/出错提醒（成品） |
+| `docs/submission/promo-banner.png` | 横版头图（成品） |
+| `docs/submission/xiaohongshu-cover.png` | 小红书竖版封面 1080×1440（站外宣传用） |
+| `docs/submission/01…07*.png` | 界面截图（真机 1 + 模拟器 6，被成品图引用，也可作补充详情图） |
+
+封面与详情图已合成完毕：拓竹官网 H2D / AMS 2 Pro 产品图（图内已标注来源）+ 嵌入遮盖序列号后的真机/模拟器截图。
 
 标题：**Bambu Monitor · 拓竹打印机监视屏**
 分类：`display`；标签：3D打印、拓竹、Bambu Lab、H2D、AMS、监视屏、MQTT、局域网、进度提醒、ESP-GSP
@@ -45,12 +55,15 @@
 
 ## 4. 固件附件
 
-**必须使用 0.2 格式**（`esp-iris-system-update/0.2`、契约 `esp-mosaico/v2`、ABI 2）——社区不再接受 `/v1` 包。0.2 独立重建完成后在此补上：
+**0.2 格式包已构建并通过官方校验**（schema `esp-iris-system-update/0.2`、契约 `esp-mosaico/v2`、Recovery ABI 2、最低 Vibe Mode `0.2.0`）：
 
 - 文件：`firmware/bambu_monitor-v0.2-system-update.irisfw`
-- SHA-256：（待 0.2 重建完成后填写）
-- schema / 契约 / 最低 Vibe Mode：（待填写）
-- 官方 bundle inspect 与 Ideas `validate_firmware()` 结果：（待填写）
+- 大小：1,950,862 字节
+- SHA-256：`ee7b2030bdfcbc565dc1c5777668a70d51514ebdb6aed47b40e11f23cb94bc5d`
+- 组件：分区表 4,096 B @ 0x8000；应用 2,000,016 B @ 0x21000（`main_app`）；`ui_apps.bin` 1,333,200 B @ 0xE80000；不含 bootloader / Vibe Mode 固件 / NVS 镜像
+- 校验：Ideas `validate_firmware()` **PASS**；官方 `esp_iris.py bundle --json inspect` **PASS**（对交付文件复验 PASS）
+- 构建环境：utils `be151ae04701…`（0.2 工具）、BSP 0.2.0、IDF `7b9cc1ac79f8…`、GSPC 0.7.0；完整证据与复现脚本见 [release-v02](release-v02/README.md)
+- 原生回归 4/4 组通过；独立副本内源码经零访问码扫描
 
 当前开发工作区的 v1 包（`b0a6b2f0…`）仅用于本机 0.1 设备日常使用，不能作为社区附件。
 
@@ -58,10 +71,9 @@
 
 - [x] 源码不含真实访问码（`bmb_config.h` 默认值已清空，全新刷机需在设置页配对）
 - [x] 截图无打印机序列号
-- [x] `mosaico-ideas.json` 元数据与截图路径就绪（`cover.png` 待 AI 生成后放入）
-- [ ] 0.2 固件包构建与官方校验（进行中）
-- [ ] `LICENSE`（MIT）放入仓库根目录
-- [ ] GitHub 仓库创建并推送（建议名见下）
+- [x] `mosaico-ideas.json` 元数据、封面与详情图就绪
+- [x] 0.2 固件包构建与官方校验（validate_firmware / bundle inspect 均 PASS）
+- [x] `LICENSE`（MIT）与仓库内容推送至 GitHub
 - [ ] 用户手动完成社区上传（本机从未登录/上传过社区服务）
 
 ## 6. GitHub 仓库建议
