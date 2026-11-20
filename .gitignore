@@ -7,7 +7,9 @@ dependencies.lock
 sdkconfig.old
 
 # Bundles built locally (release artifacts are attached to community posts)
+# — except the released 0.2 package, which IS distributed via this repo.
 *.irisfw
+!firmware/*.irisfw
 *.gspb
 *.bin
 *.elf
